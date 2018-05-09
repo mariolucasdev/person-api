@@ -5,9 +5,10 @@ const router = express.Router();
 //Routes
 const index = require('./src/routes/index');
 const personRoute = require('./src/routes/personRoute');
+const booksRoute = require('./src/routes/booksRoute');
 
 app.use('/', index);
 app.use('/persons', personRoute);
-app.use('/persons/:id', personRoute);
+app.use('/books', booksRoute);
 
 module.exports = app;
