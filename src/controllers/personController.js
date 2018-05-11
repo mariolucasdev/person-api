@@ -1,17 +1,13 @@
-const persons = [
-  { id: 1, name: 'Mário', idade: '23' },
-  { id: 2, name: 'Henirque', idade: '23' },
-  { id: 3, name: 'Maurício', idade: '20' }
-];
+const model = require('../models/personModel');
 
 exports.get = (req, res, next) => {
   let id = parseInt(req.params.id);
-  let person = persons.filter(persons => persons.id === id);
+  let person = model.personsGet().filter(p => p.id === id);
   res.status(200).send(person);
 };
 
 exports.getAll = (req, res, next) => {
-  res.status(200).send(persons);
+  res.status(200).send(model.personsGet());
 };
 
 exports.post = (req, res, next) => {
