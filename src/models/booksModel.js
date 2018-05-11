@@ -1,3 +1,5 @@
+const conn = require('../../bin/dbConnection');
+
 const books = [
     {
       id: 'kansdjkn23njknwdj',
