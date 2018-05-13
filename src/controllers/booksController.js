@@ -1,7 +1,8 @@
 const model = require('../models/booksModel');
 
 exports.get = (req, res, next) => {
-  res.status(200).send(model.getBooks());
+  let id = parseInt(req.params.id);
+  res.status(200).send(model.get(id));
 };
 
 exports.getAll = (req, res, next) => {

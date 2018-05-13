@@ -31,4 +31,5 @@ const books = [
     }
   ];
 
+  exports.get = id => books.find(b => b.id === id);
   exports.getBooks = () => books;
